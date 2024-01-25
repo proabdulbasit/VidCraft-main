@@ -1,0 +1,79 @@
+{
+    "_meta": {
+        "template_version": 0
+    },
+    "fixtures": [
+        {
+            "name": "prod_silver",
+            "path": "/v1/products",
+            "method": "post",
+            "params": {
+                "name": "SILVER",
+                "description": "{\"time\":\"2400 sec\",\"avatars\":\"2\",\"newsdb\":true,\"backgrounds\":\"3\",\"voice\":\"20 (Anglais/Français)\",\"imageGenOnTv\":false}"
+            }
+        },
+        {
+            "name": "price_silver_month",
+            "path": "/v1/prices",
+            "method": "post",
+            "params": {
+                "product": "${prod_silver:id}",
+                "currency": "usd",
+                "billing_scheme": "per_unit",
+                "unit_amount": 9999,
+                "recurring": {
+                    "interval": "month",
+                    "interval_count": 1
+                }
+            }
+        },
+        {
+            "name": "prod_bronze",
+            "path": "/v1/products",
+            "method": "post",
+            "params": {
+                "name": "BRONZE",
+                "description": "{\"time\":\"6000 sec\",\"avatars\":\"4\",\"newsdb\":true,\"backgrounds\":\"5\",\"voice\":\"20 (Anglais/Français)\",\"imageGenOnTv\":true}"
+            }
+        },
+        {
+            "name": "price_bronze_month",
+            "path": "/v1/prices",
+            "method": "post",
+            "params": {
+                "product": "${prod_bronze:id}",
+                "currency": "usd",
+                "billing_scheme": "per_unit",
+                "unit_amount": 24999,
+                "recurring": {
+                    "interval": "month",
+                    "interval_count": 1
+                }
+            }
+        },
+        {
+            "name": "prod_gold",
+            "path": "/v1/products",
+            "method": "post",
+            "params": {
+                "name": "GOLD",
+                "description": "{\"time\":\"12000 sec\",\"avatars\":\"5 + Avatar Customization\",\"newsdb\":true,\"backgrounds\":\"5 + Customization of Backgrounds\",\"voice\":\"5 + Voice Customization\",\"imageGenOnTv\":true}"
+            }
+        },
+        {
+            "name": "price_gold_month",
+            "path": "/v1/prices",
+            "method": "post",
+            "params": {
+                "product": "${prod_gold:id}",
+                "currency": "usd",
+                "billing_scheme": "per_unit",
+                "unit_amount": 49999,
+                "recurring": {
+                    "interval": "month",
+                    "interval_count": 1
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "mediacraft",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/joy": "^5.0.0-beta.13",
+    "@mui/material": "^5.14.2",
+    "@nextui-org/react": "^1.0.0-beta.13",
+    "@stripe/stripe-js": "^2.2.2",
+    "@supabase/auth-helpers-nextjs": "^0.7.4",
+    "@supabase/auth-helpers-react": "^0.4.2",
+    "@supabase/supabase-js": "^2.31.0",
+    "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
+    "classnames": "^2.5.1",
+    "get-website-favicon": "^0.0.7",
+    "gsap": "^3.12.2",
+    "next": "13.4.11",
+    "postcss": "8.4.26",
+    "react": "18.2.0",
+    "react-audio-player": "^0.17.0",
+    "react-circle-flags": "^0.0.19",
+    "react-dom": "18.2.0",
+    "react-gsap": "^3.2.1",
+    "react-icons": "^4.10.1",
+    "react-material-ui-carousel": "^3.4.2",
+    "react-merge-refs": "^2.1.1",
+    "react-player": "^2.13.0",
+    "react-toastify": "^10.0.3",
+    "stripe": "^14.11.0",
+    "swiper": "^10.3.1",
+    "tailwindcss": "3.3.3"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.1",
+    "typescript": "5.3.3"
+  }
+}
